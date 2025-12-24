@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>总攻击机会！！！！</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        /* 横向滚动容器 */
+        .hc {
+            display: flex;
+            height: calc(100vh - 60px);
+            /* 减去导航栏高度 */
+            width: 1000vw;
+            /* 10个页面，每个100vw */
+            transition: transform 0.2s ease-out;
+            /* 减少过渡时间以实现更实时的滚动响应 */
+        }
+
+        /* 每个栏目样式 */
+        .sc {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 图片容器样式 */
+        .si {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 图片样式 - 填充全屏，悬停时从半透明变为不透明 */
+        .si img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            /* 初始半透明 */
+            transition: opacity 0.3s ease;
+        }
+
+        /* 鼠标悬停时图片变为不透明 */
+        .si img:hover {
+            opacity: 1;
+        }
+
+        /* 图片链接样式 */
+        .si a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 标题容器 - 带半透明灰色外框 */
+        .stc {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(128, 128, 128, 0.356);
+            /* 半透明灰色背景 */
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        /* 标题样式 */
+        .st {
+            font-size: 2em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">返回首页</a>
+    </nav>
+
+    <div class="hc" id="hc">
+        <!-- 10个栏目 -->
+        <div class="sc">
+            <div class="si">
+                <a href="https://baike.baidu.com/item/%E7%BB%93%E5%9F%8E%E7%90%86/12914208">
+                    <img src="img/结城理.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Hero</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E6%B1%90%E8%A7%81%E7%90%B4%E9%9F%B3/66747093?structureClickId=66747093&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=835bbb2f864f2225a7039ddb&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=19959745">
+                    <img src="img/女主.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Shiomi</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E5%B2%B3%E7%BE%BD%E7%94%B1%E5%8A%A0%E8%8E%89/19958050?lemmaFrom=lemma_relation_starMap&fromModule=lemma_relation-starMap&lemmaIdFrom=12914208">
+                    <img src="img/油咖喱酱.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Yukari</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E4%BC%8A%E7%BB%87%E9%A1%BA%E5%B9%B3/19959745?lemmaFrom=lemma_starMap&fromModule=lemma_starMap&starNodeId=0c0eaf1e5a0ad34fb62e1c77&lemmaIdFrom=19958050">
+                    <img src="img/一只顺平.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Junpei</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E6%A1%90%E6%9D%A1%E7%BE%8E%E9%B9%A4/2335288?structureClickId=2335288&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=c879ed0e2c2240147f340987&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=19959745">
+                    <img src="img/学姐.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Mitsuru</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E7%9C%9F%E7%94%B0%E6%98%8E%E5%BD%A6/2740705?structureClickId=2740705&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=9a720ebd593d13c5226a5a77&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=2335288">
+                    <img src="img/学长.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Akihiko</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E5%9F%83%E7%99%B8%E6%96%AF/63795662?structureClickId=63795662&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=c9fdac1d971275d2280ac9d2&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=2740705">
+                    <img src="img/Aegis.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Aegis</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E8%8D%92%E5%9E%A3%E7%9C%9F%E6%AC%A1%E9%83%8E/63910148?structureClickId=63910148&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=a642e1fb8f7f843a2c6f8111&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=63795662">
+                    <img src="img/荒垣.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Shinjiro</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E8%99%8E%E7%8B%BC%E4%B8%B8/63910175?structureClickId=63910175&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=2d016776425970bae9267e12&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=63910148">
+                    <img src="img/苟子.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Koromaru</h2>
+            </div>
+        </div>
+
+        <div class="sc">
+            <div class="si">
+                <a
+                    href="https://baike.baidu.com/item/%E5%A4%A9%E7%94%B0%E4%B9%BE/63910166?structureClickId=63910166&structureId=0c0eaf1e5a0ad34fb62e1c77&structureItemId=a2db9e0a6d9f65f7eeb77712&lemmaFrom=starMapContent_star&fromModule=starMap_content&lemmaIdFrom=63910148">
+                    <img src="img/舔舔钱.jpg">
+                </a>
+            </div>
+            <div class="stc">
+                <h2 class="st">Ken</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hc = document.getElementById('hc');
+            let scrollLeft = 0;
+
+            // 监听滚轮事件实现横向滚动
+            document.addEventListener('wheel', function (e) {
+                // 防止默认的滚动行为
+                e.preventDefault();
+
+                // 计算新的滚动位置
+                const maxScroll = 900; // 最大滚动值（10个页面，最后一个页面开始位置）
+
+                // 根据滚轮方向调整滚动：向上滚动(-)向左移动内容，向下滚动(+)向右移动内容
+                if (e.deltaY < 0) {
+                    // 向上滚动，向左移动内容
+                    scrollLeft = Math.max(scrollLeft - 30, 0);
+                } else {
+                    // 向下滚动，向右移动内容
+                    scrollLeft = Math.min(scrollLeft + 40, maxScroll);
+                }
+
+                // 应用滚动
+                hc.style.transform = `translateX(-${scrollLeft}vw)`;
+            }, { passive: false });
+        });
+    </script>
+</body>
+
+</html>
